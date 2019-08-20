@@ -32,7 +32,7 @@ public class CriadorDeProdutos {
 			protected void doInTransactionWithoutResult(TransactionStatus status) {
 				
 				Loja casaDoCodigo = new Loja();
-				casaDoCodigo.setNome("Casa do C√≥digo");
+				casaDoCodigo.setNome("Casa do CÛdigo");
 				
 				em.persist(casaDoCodigo);
 				
@@ -44,11 +44,11 @@ public class CriadorDeProdutos {
 				Categoria tecnologia = new Categoria("Tecnologia");
 				em.persist(tecnologia);
 				
-				Categoria musica = new Categoria("M√∫sica");
+				Categoria musica = new Categoria("M˙sica");
 				em.persist(musica);
 				
 				Produto cursoDeViolao = new Produto();
-				cursoDeViolao.setNome("Curso de Viol√£o");
+				cursoDeViolao.setNome("Curso de Viol„o");
 				cursoDeViolao.setLoja(musicalAlegre);
 				cursoDeViolao.setPreco(49.0);
 				cursoDeViolao.setDescricao("Estude com os melhores professores e aprenda no seu ritmo, sem sair de casa.");
@@ -58,7 +58,7 @@ public class CriadorDeProdutos {
 				em.persist(cursoDeViolao);
 				
 				Produto livroDeArquitetura = new Produto();
-				livroDeArquitetura.setNome("Introdu√ßao a Arquitetura Java e Design de projetos com Java");
+				livroDeArquitetura.setNome("IntroduÁ„o a Arquitetura Java e Design de projetos com Java");
 				livroDeArquitetura.setLoja(casaDoCodigo);
 				livroDeArquitetura.setPreco(30.0);
 //				livroDeArquitetura.adicionarCategorias(tecnologia);
@@ -90,9 +90,9 @@ public class CriadorDeProdutos {
 				em.persist(livroDeSpring);
 				
 				Produto violao = new Produto();
-				violao.setNome("Viol√£o");
+				violao.setNome("Viol„o");
 				violao.setLoja(musicalAlegre);
-				violao.setDescricao("Excelente viol√£o");
+				violao.setDescricao("Excelente viol„o");
 				violao.setPreco(500.0);
 //				violao.adicionarCategorias(musica);
 				violao.setLinkDaFoto("http://www.marillac.g12.br/imgs/atividade%20complementar/violao.jpg");
