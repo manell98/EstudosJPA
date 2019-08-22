@@ -58,22 +58,22 @@
 					<label for="descricao">
 						Categoria:
 					</label><br>
-					<c:forEach items="${categorias}" var="categoria" varStatus="status">
+					<c:forEach items="${categoria}" var="categoria" varStatus="status">
 						<c:set var="contains" value="false"/>
 						
-						<c:forEach items="${produto.categorias}" var="categoriaProduto" varStatus="statusProduto">
+						<c:forEach items="${produto.categoria}" var="categoriaProduto" varStatus="statusProduto">
 							<c:if test="${categoriaProduto.id == categoria.id}">
 								<c:set var="contains" value="true"/>		
 							</c:if>
 						</c:forEach>	
 						<c:choose>	
 							<c:when test="${contains}">
-					 			<input type="checkbox" name="categorias" value="${categorias[status.index].id}" checked> 
+					 			<input type="checkbox" name="categorias" value="${categoria[status.index].id}" checked> 
 									${categoria.nome}<br>
 								<c:set var="contains" value="false"/>		
 							</c:when>
 							<c:when test="${not contains }">
-								<input type="checkbox" name="categorias" value="${categorias[status.index].id}"> 
+								<input type="checkbox" name="categorias" value="${categoria[status.index].id}"> 
 									${categoria.nome}<br>
 							</c:when>
 						</c:choose>
